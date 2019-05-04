@@ -1,0 +1,29 @@
+# caputre uart log
+service btcaptureuart /system/bin/sh /system/etc/bluetooth/nbbt_capture_uart.sh
+    class late_start
+    user root
+    group root system bluetooth
+    disabled
+    oneshot
+    seclabel u:r:btcaptureuart:s0
+
+on property:sys.bt.nblog.capture.uart=1
+    start btcaptureuart
+
+on property:sys.bt.nblog.capture.uart=0
+    start btcaptureuart
+
+# hidl : bluedroidstack server
+service bluetoothext-1-0-bds /system/bin/hw/vendor.hardware.wl.bt.bluetoothext@1.0-bds
+    class late_start
+    user root
+    group root bluetooth system wakelock net_bt_admin sdcard_rw media_rw
+    seclabel u:r:bluetooth_ext_sys:s0
+    disabled
+    oneshot
+
+on property:sys.wl.bt.bds.impl=1
+    start bluetoothext-1-0-bds
+
+on property:sys.wl.bt.bds.impl=0
+    stop  bluetoothext-1-0-bds

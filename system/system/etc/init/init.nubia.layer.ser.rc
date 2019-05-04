@@ -1,0 +1,9 @@
+service nubia_layer_ser /system/bin/nubia_layer_ser
+    class core
+    user root
+    group root system
+    seclabel u:r:nubia_layer_ser:s0
+
+
+on property:init.svc.surfaceflinger=running
+    start nubia_layer_ser
