@@ -1,0 +1,8 @@
+overrideGPURotationUsecase=1
+enableLRMEDS2=TRUE
+exposeFullSizeForQCFA=TRUE
+outputFormat=OutputFormatYUV420NV12
+tintlessEnable=TRUE
+preFlashMaxFrameWaitLimitAF=25
+enableFDPreprocessingAlways=TRUE
+systemLogEnable=FALSE

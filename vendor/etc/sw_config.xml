@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><sunwave:Config xmlns:sunwave="http://www.sunwavecorp.com/some-location" Environment="TEE" platform="项目信息: 请填写项目信息">
+  
+  <solution>
+    <qsee_spi_id cname="QSEE SPI 设备号" default="6" desc="QSEE SPI 设备号。默认：QSEE_SPI_DEVICE_6" format="array" options="QSEE_SPI_DEVICE_1|QSEE_SPI_DEVICE_2|QSEE_SPI_DEVICE_3|QSEE_SPI_DEVICE_4|QSEE_SPI_DEVICE_5|QSEE_SPI_DEVICE_6|QSEE_SPI_DEVICE_7|QSEE_SPI_DEVICE_8|QSEE_SPI_DEVICE_9|QSEE_SPI_DEVICE_10|QSEE_SPI_DEVICE_11|QSEE_SPI_DEVICE_12" useable="true" values="1|2|3|4|5|6|7|8|9|10|11|12">3</qsee_spi_id>
+     
+  </solution>
+  <feature>
+    <key_emulation_mode cname="按键功能模式选择" default="0" desc="按键功能模式选择。默认：禁用按键功能(0)" format="array" options="禁用按键功能(0)|仅传统单击(1)|手指按下报单击(2)|手指抬起报单击或长按(3)|仅长按(4)" useable="true" values="0|1|2|3|4">5</key_emulation_mode>
+
+  </feature>
+  
+  
+</sunwave:Config>
